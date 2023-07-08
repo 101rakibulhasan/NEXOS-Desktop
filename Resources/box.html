@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        color:white;
+        background-color: black;
+    }
+    .one{
+        position: absolute;
+        font-size: 18vh;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .one p{
+        letter-spacing: 30px;
+    }
+
+    .two{
+        font-size: 3vh;
+        position: absolute;
+        bottom:12%;
+        right:30%;
+        border: 2px solid white;
+        animation: border-pulse 2s infinite;
+        padding: 10px;
+    }
+
+    .two p{
+        width: 100%;
+        text-align: right;
+    }
+
+    .box{
+        position: absolute;
+        width:30vh;
+        height: 30vh;
+        border-radius: 10px;
+        top: 10%;
+        left:30%;
+        background-color: rgba(122, 122, 122, 0.15);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        border:1px solid rgb(72, 72, 72);
+        animation: box-fun 5s infinite;
+    }
+
+    @keyframes box-fun {
+        0% {
+            top: 10%;
+            left:30%;
+      }
+      25% {
+        top: 60%;
+        left:30%;
+      }
+      50% {
+        top: 60%;
+        left:50%;
+        }
+        75%{
+            top: 10%;
+            left:50%;
+        }
+        100%{
+            top: 10%;
+            left:30%;
+        }
+    }
+
+    @keyframes slide-in-left {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slide-in-top {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slide-in-right {
+      0% {
+        transform: translateX(50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes border-pulse {
+      0% {
+        border-color: #3c3c3c;
+      }
+      50% {
+        border-color: #ffffff;
+      }
+      100% {
+        border-color: #333333;
+      }
+    }
+    
+    .slide-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .slide-text {
+      font-weight: bold;
+      text-transform: uppercase;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      background-color: transparent;
+    }
+    
+    .slide-left {
+      animation-name: slide-in-left;
+    }
+    
+    .slide-top {
+      animation-name: slide-in-top;
+    }
+    
+    .slide-right {
+      animation-name: slide-in-right;
+    }
+
+    </style>
+<body>
+    <div class="one">
+        <p class="slide-text slide-left">NEX</p>
+        <p class="slide-text slide-right">IN</p>
+        <p class="slide-text slide-left">A</p>
+    </div>
+
+    <div class="two">
+        <p>SIMPLE</p>
+        <p>MINIMAL</p>
+        <p>GORGEOUS</p>
+    </div>
+
+    <div class="box">
+        
+    </div>
+    
+</body>
+</html>

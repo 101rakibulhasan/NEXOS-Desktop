@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/wallpapers">
+        <file>cyclical_1080p.png</file>
+        <file>crystals.mp4</file>
+        <file>box.html</file>
+    </qresource>
+</RCC>
